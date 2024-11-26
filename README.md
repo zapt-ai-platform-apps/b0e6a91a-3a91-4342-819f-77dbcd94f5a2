@@ -1,25 +1,20 @@
 # New App
 
-## Overview
-
-New App is a Joke Central application where users can sign in, add, and view jokes. Users can also generate jokes using AI, convert jokes to speech, generate images, and edit their profiles.
+New App is a SolidJS application that allows users to generate, view, and save jokes. It also provides additional features like generating images, converting text to speech, and generating markdown stories.
 
 ## User Journeys
 
-1. [Sign In](docs/journeys/sign-in.md) - Access the app by signing in with ZAPT
-2. [Add a New Joke](docs/journeys/add-new-joke.md) - Add your own joke to the app
-3. [View Jokes](docs/journeys/view-jokes.md) - Browse the list of your jokes
-4. [Generate a Joke](docs/journeys/generate-joke.md) - Use AI to generate a new joke
-5. [Edit Profile](docs/journeys/edit-profile.md) - View and update your profile information
-6. [Generate Image](docs/journeys/generate-image.md) - Generate an image using AI
-7. [Text to Speech](docs/journeys/text-to-speech.md) - Convert a joke to speech
-8. [Generate Markdown Story](docs/journeys/generate-markdown-story.md) - Generate a markdown story using AI
+1. [Sign In](docs/journeys/sign-in.md) - Access the app by signing in with ZAPT.
+2. [Add a New Joke](docs/journeys/add-new-joke.md) - Create and save a new joke.
+3. [View Jokes](docs/journeys/view-jokes.md) - View your list of saved jokes.
+4. [Generate a Joke](docs/journeys/generate-joke.md) - Automatically generate a joke using AI.
+5. [Generate an Image](docs/journeys/generate-image.md) - Generate an image based on a prompt.
+6. [Text to Speech](docs/journeys/text-to-speech.md) - Convert your joke to an audio file.
+7. [Generate Markdown Story](docs/journeys/generate-markdown.md) - Generate a markdown story using AI.
+8. [Sign Out](docs/journeys/sign-out.md) - Sign out of the application.
 
-## External APIs Used
+## External API Services
 
-- **Supabase Auth**: Used for user authentication
-- **ZAPT AI Services**: Used for generating jokes, images, text-to-speech, and markdown stories via `createEvent` function
-
-## Note
-
-This app is made on ZAPT. Visit [www.zapt.ai](https://www.zapt.ai) for more information.
+- **ZAPT**: Used for authentication and event creation.
+- **Sentry**: Used for error tracking and monitoring.
+- **Umami**: Used for tracking website analytics.
