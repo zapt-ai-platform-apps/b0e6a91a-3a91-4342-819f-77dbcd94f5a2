@@ -1,16 +1,16 @@
 import { jokes } from '../drizzle/schema.js';
-import { authenticateUser } from "./_apiUtils.js"
+import { authenticateUser } from "./_apiUtils.js";
 import { neon } from '@neondatabase/serverless';
 import { drizzle } from 'drizzle-orm/neon-http';
 import * as Sentry from "@sentry/node";
 
 Sentry.init({
-  dsn: process.env.VITE_PUBLIC_SENTRY_DSN,
-  environment: process.env.VITE_PUBLIC_APP_ENV,
+  dsn: process.env.SENTRY_DSN,
+  environment: process.env.APP_ENV,
   initialScope: {
     tags: {
       type: 'backend',
-      projectId: process.env.PROJECT_ID
+      projectId: process.env.APP_ID
     }
   }
 });

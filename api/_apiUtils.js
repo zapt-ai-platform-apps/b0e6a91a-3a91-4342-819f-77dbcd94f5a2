@@ -1,6 +1,6 @@
 import { initializeZapt } from '@zapt/zapt-js';
 
-const { supabase } = initializeZapt(process.env.VITE_PUBLIC_APP_ID);
+const { supabase } = initializeZapt(process.env.APP_ID);
 
 export async function authenticateUser(req) {
   const authHeader = req.headers.authorization;
@@ -11,7 +11,7 @@ export async function authenticateUser(req) {
   const token = authHeader.split(' ')[1];
   const { data: { user }, error } = await supabase.auth.getUser(token);
 
-  if (error) {
+  if (error || !user) {
     throw new Error('Invalid token');
   }
 
